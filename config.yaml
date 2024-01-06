@@ -1,0 +1,50 @@
+baseURL: 'https://kanatonishiura.com/'
+languageCode: en-us
+title: Kanato Nishiura
+theme: PaperMod
+
+googleAnalytics: G-WZV80VBNE5
+
+assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/favicon.ico"
+
+params:
+  cover:
+      linkFullImages: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+
+  socialIcons:
+          - name: instagram
+            url: "https://instagram.com/kanato_0821"
+          - name: github
+            url: "https://github.com/xknt21"
+
+  contentDir: content/en
+  staticDir: static/
+  profileMode:
+      enabled: true
+      title: Hello world, I'm kanato! 🧑🏻‍💻
+      subtitle: "Welcome to my digital garden where I document my learnings as a Uni student."
+      imageUrl: "img_6710-2.jpg"
+      imageWidth: 120
+      imageHeight: 120
+      imageTitle: kanato-profile
+      
+      buttons:
+        - name: About Me
+          url: en/about
+        - name: Blog
+          url: en/blogs
+menu:
+   main:
+     - identifier: About Me
+       name: About Me
+       url: en/about/
+       weight: 5
+     - identifier: Blog
+       name: Blog
+       url: en/blogs/
+       weight: 10
