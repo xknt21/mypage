@@ -14,7 +14,8 @@ ShowReadingTime: true
 ShowPostNavLinks: true
 ---
 
-#Welcome to my digital garden!!  
+# Welcome to my digital garden!!  
+
 Hi! It's kanato.  
-I'm Japanese Uni student studying about computer science.  
+I'm Japanese Uni student studying computer science.  
 I'm going to sharing about my journey and learnings tech!  
