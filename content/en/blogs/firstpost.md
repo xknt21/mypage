@@ -4,7 +4,7 @@ url: 'en/blogs'
 summary: 'firstpost'
 date: 2024-01-06T23:01:50+09:00
 author: 'Kanato Nishiura'
-showToc: true
+showToc: false
 TocOpen: false
 draft: false
 hidemeta: false
