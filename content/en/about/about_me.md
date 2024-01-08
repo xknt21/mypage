@@ -1,5 +1,5 @@
 ---
-title: "About_me"
+title: "About Me"
 url: 'en/about'
 summary: 'About me'
 date: 2024-01-08T16:26:24+09:00
@@ -11,7 +11,7 @@ hidemeta: false
 comments: false
 hideSummary: false
 ShowReadingTime: true
-ShowPostNavLinks: true
+ShowPostNavLinks: false
 ---
 
 # Self-introduction
@@ -32,7 +32,7 @@ ShowPostNavLinks: true
   
 # Awards
 * Winning a prize in the 5th Junior and Senior High School Informatics Research Contest 
-  sponsored by the Information Processing Society of Japan (IPSJ)
+  sponsored by the Information Processing Society of Japan (IPSJ) - 2023.03
   * https://www.ipsj.or.jp/event/taikai/85/85PosterSession/ipsj_poster/pdf/8003.pdf
 
 # Certifications
