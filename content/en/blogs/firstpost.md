@@ -18,4 +18,4 @@ ShowPostNavLinks: true
 
 Hi! It's kanato.  
 I'm Japanese Uni student studying computer science.  
-I'm going to sharing about my journey and learnings tech!  
+I'm going to sharing about my journey and learnings in tech!  
