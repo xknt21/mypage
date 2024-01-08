@@ -16,13 +16,13 @@ ShowPostNavLinks: true
 
 # Self-introduction
 * Name 
-  Kanato Nishiura
+  * Kanato Nishiura
 
 * Sports
-  track and field, road bike
+  * track and field, road bike
 
 * Hobby
-  running🏃🏻, cycling🚴🏻, rock music🥁
+  * running🏃🏻, cycling🚴🏻, rock music🥁
 
 # Education
 * Ritsumeikan Univ. Information Systems Science and Engineering Course (Japan) - 2024.04~
@@ -34,6 +34,6 @@ ShowPostNavLinks: true
 * Winning a prize in the 5th Junior and Senior High School Informatics Research Contest 
   sponsored by the Information Processing Society of Japan (IPSJ)
   * https://www.ipsj.or.jp/event/taikai/85/85PosterSession/ipsj_poster/pdf/8003.pdf
-  
+
 # Certifications
-Comming soon!
+Coming soon!
