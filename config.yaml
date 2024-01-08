@@ -27,7 +27,7 @@ params:
           - name: github
             url: "https://github.com/xknt21"
 
-  contentDir: content/en/blogs
+  contentDir: content/en/blogs/
   staticDir: static/
   profileMode:
       enabled: true
