@@ -1,6 +1,6 @@
 ---
 title: "this is the test"
-#url: 'en/blogs/'
+url: 'en/blogs/secondpost'
 summary: 'this is the test'
 date: 2024-01-08T22:13:52+09:00
 author: "Kanato Nishiura"

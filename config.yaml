@@ -29,6 +29,7 @@ params:
 
   contentDir: content/en/blogs/
   staticDir: static/
+  publishDir: "data"
   profileMode:
       enabled: true
       title: Hello world, I'm kanato! 🧑🏻‍💻
@@ -40,9 +41,9 @@ params:
       
       buttons:
         - name: About Me
-          url: en/about
+          url: en/about/
         - name: Blog
-          url: en/blogs
+          url: en/blogs/
 
       fuseOpts:
          isCaseSensitive: false
