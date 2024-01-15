@@ -1,6 +1,5 @@
 ---
 title: "this is the test"
-aliases: ['en/blogs/']
 summary: 'this is the test'
 date: 2024-01-08T22:13:52+09:00
 author: "Kanato Nishiura"

@@ -18,9 +18,11 @@ editPost:
 params:
   cover:
       linkFullImages: true
+      hideInList: false
+      hiddenInSingle: false
   ShowBreadCrumbs: true
   ShowPostNavLinks: true
-
+  hideDescriptionInList: false
   socialIcons:
           - name: instagram
             url: "https://instagram.com/kanato_0821"
@@ -63,3 +65,15 @@ menu:
        name: Blog
        url: en/blogs/
        weight: 10
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup: 
+   goldmark:
+       renderer:
+          unsafe: true
+          
