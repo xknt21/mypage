@@ -43,9 +43,9 @@ params:
       
       buttons:
         - name: About Me
-          url: en/about/
+          url: /about
         - name: Blog
-          url: en/blogs/
+          url: /blogs
 
       fuseOpts:
          isCaseSensitive: false
@@ -59,11 +59,11 @@ menu:
    main:
      - identifier: About Me
        name: About Me
-       url: en/about/
+       url: /about
        weight: 5
      - identifier: Blog
        name: Blog
-       url: en/blogs/
+       url: /blogs
        weight: 10
 
 outputs:
@@ -76,4 +76,3 @@ markup:
    goldmark:
        renderer:
           unsafe: true
-          
