@@ -43,7 +43,7 @@ params:
       
       buttons:
         - name: About Me
-          url: /about
+          url: /about/aboutme
         - name: Blog
           url: /blogs
 
@@ -59,7 +59,7 @@ menu:
    main:
      - identifier: About Me
        name: About Me
-       url: /about
+       url: /about/aboutme
        weight: 5
      - identifier: Blog
        name: Blog
