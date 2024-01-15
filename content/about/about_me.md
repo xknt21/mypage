@@ -1,7 +1,6 @@
 ---
 title: "About Me"
-summary: 'About me'
-url: "/about"
+summary: 'About Me'
 date: 2024-01-08T16:26:24+09:00
 author: "Kanato Nishiura"
 showToc: true
