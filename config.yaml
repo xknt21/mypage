@@ -45,7 +45,7 @@ params:
         - name: About Me
           url: /about/aboutme
         - name: Blog
-          url: /blogs
+          url: /blog
 
       fuseOpts:
          isCaseSensitive: false
@@ -63,7 +63,7 @@ menu:
        weight: 5
      - identifier: Blog
        name: Blog
-       url: /blogs
+       url: /blog
        weight: 10
 
 outputs:

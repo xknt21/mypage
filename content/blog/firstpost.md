@@ -1,6 +1,6 @@
 ---
 title: 'FirstPost'
-summary: 'firstpost'
+summary: 'My First Post!!'
 date: 2024-01-06T23:01:50+09:00
 author: 'Kanato Nishiura'
 weight: 80
