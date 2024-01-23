@@ -17,5 +17,7 @@ ShowPostNavLinks: true
 # Welcome to my digital garden!!  
 
 Hi! It's kanato.  
+
 I'm Japanese Uni student studying computer science.  
-I'm going to sharing about my journey and learnings in tech!  
+
+I will share about my journey and learnings in tech!  
