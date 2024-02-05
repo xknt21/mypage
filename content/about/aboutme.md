@@ -23,7 +23,7 @@ ShowPostNavLinks: false
 * Hobby
   * running🏃🏻, cycling🚴🏻, rock music🥁
 
-{{< figure src="img_0626.jpg#center" alt="my roadbike!" caption="my roadbike!">}}
+{{< figure src="/static/img_0626.jpg#center" alt="my roadbike!" caption="my roadbike!">}}
 
 # Education
 * Ritsumeikan Univ. Information Systems Science and Engineering Course (Japan) - 2024.04~
