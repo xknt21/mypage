@@ -29,7 +29,7 @@ cover:
 * Hobby
   * running🏃🏻, cycling🚴🏻, rock music🥁
 
-{{< img src="/static/img_0626.jpg#center" alt="my roadbike!" caption="my roadbike!">}}
+{{< figure src="/images/img_0626.jpg#center" alt="my roadbike!" caption="my roadbike!">}}
 
 # Education
 * Ritsumeikan Univ. Information Systems Science and Engineering Course (Japan) - 2024.04~
