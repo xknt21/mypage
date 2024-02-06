@@ -11,12 +11,6 @@ comments: false
 hideSummary: false
 ShowReadingTime: true
 ShowPostNavLinks: false
-# cover:
-#     image: "static/img_0626.jpg"
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false
-#     hidden: true
 ---
 
 # Self-introduction
@@ -29,7 +23,8 @@ ShowPostNavLinks: false
 * Hobby
   * running🏃🏻, cycling🚴🏻, rock music🥁
 
-{{< figure src="img_0626.jpg#center" alt="my roadbike!" caption="my roadbike!">}}
+![Imgur](https://i.imgur.com/kb7Qr8C.jpg)
+*my roadbike!*
 
 # Education
 * Ritsumeikan Univ. Information Systems Science and Engineering Course (Japan) - 2024.04~
