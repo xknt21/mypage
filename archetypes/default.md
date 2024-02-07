@@ -1,4 +1,4 @@
-+++
+---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 author: "Kanato Nishiura"
@@ -10,4 +10,4 @@ comments: false
 hideSummary: false
 ShowReadingTime: true
 ShowPostNavLinks: true
-+++
+---
