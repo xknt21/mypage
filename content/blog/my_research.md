@@ -48,7 +48,7 @@ The class schedule used in the high school has an evaluation value of 5.97.
 However, after applying the genetic algorithm for 500 generations with 20 individuals and 5 elites, the evaluation value was 0.45.
 
 
-[Click here for the code](https://github.com/xknt21/ga_timetable.git)
+[Click here for the code](https://github.com/xknt21/ga_timetable/blob/main/GA_timetable.py)
 
 ### Thoughts
 
