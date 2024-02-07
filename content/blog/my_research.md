@@ -1,5 +1,5 @@
 ---
-title: "About my research in high school"
+title: "About my research in high school👨🏼‍🔬"
 summary: "Research motivation and summary"
 description: "Research motivation and summary"
 date: 2024-02-07T11:26:23+09:00
@@ -56,5 +56,5 @@ This research was first project for me.
 There were many things that did not go well, but we were able to proceed with the advice of those around us.　　
 I would like to use the perseverance and problem-solving skills I gained from this experience in my next research project.　　
 
-Thanks for reading this far!　　
+Thanks for reading this far!  
 See you in the next post!
