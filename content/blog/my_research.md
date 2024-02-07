@@ -53,7 +53,7 @@ However, after applying the genetic algorithm for 500 generations with 20 indivi
 ### Thoughts
 
 This research was first project for me.  
-There were many things that did not go well, but we were able to proceed with the advice of those around us.　　
+There were many things that did not go well, but we were able to proceed with the advice of those around us.  
 I would like to use the perseverance and problem-solving skills I gained from this experience in my next research project.　　
 
 Thanks for reading this far!  
