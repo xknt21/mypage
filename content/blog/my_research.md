@@ -43,9 +43,15 @@ The accuracy of the figures here is not the main theme, so we evaluated them our
 
 ### 3. Comparison with class schedule used in high school
 
-The class schedule used in the high school has an evaluation value of 5.97.
+The class schedule used in the high school has an evaluation value of "5.97".
 
-However, after applying the genetic algorithm for 500 generations with 20 individuals and 5 elites, the evaluation value was 0.45.
+However, after applying the genetic algorithm for 500 generations with 20 individuals and 5 elites, the evaluation value was "0.45".
+
+* individuals
+  * Number of class schedules per generation
+
+* elites
+  * The top five smallest class schedule evaluation values in a generation, which are passed on to the next generation.
 
 
 [Click here for the code](https://github.com/xknt21/ga_timetable/blob/main/GA_timetable.py)
