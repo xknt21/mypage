@@ -37,7 +37,7 @@ In Junior High School, I was working on two things using a computer.
 There is a college near my house that specializes in EEIC, and students and alumni there offered classes for junior high school students. There I learned basic knowledge of circuits, etc., and then did a project to control a robot I had built myself using an Arduino.
 
 * About Arduino
-  * Arduino is an open-source electronics platform based on easy-to-use hardware and software. Arduino boards are able to read inputs - light on a sensor, a finger on a button, or a Twitter message - and turn it into an output - activating a motor, turning on an LED, publishing something online. You can tell your board what to do by sending a set of instructions to the microcontroller on the board. To do so you use the Arduino programming language (based on Wiring), and the Arduino Software (IDE), based on Processing. More about details >>> [click here](https://www.arduino.cc/en/Guide/Introduction)
+  * Arduino is an open-source electronics platform based on easy-to-use hardware and software. Arduino boards are able to read inputs - light on a sensor, a finger on a button, or a Twitter message - and turn it into an output - activating a motor, turning on an LED, publishing something online. You can tell your board what to do by sending a set of instructions to the microcontroller on the board. To do so you use the Arduino programming language (based on Wiring), and the Arduino Software (IDE), based on Processing. More about details >> [click here](https://www.arduino.cc/en/Guide/Introduction)
 
 ![Imgur](https://i.imgur.com/oDpBPcC.jpg)
 *my robot!*
@@ -49,7 +49,7 @@ The robot is equipped with a distance measurement sensor and is programmed to tu
 I was also interested in app development and develop a random number generation app using Andriod Studio.
 
 * About Android Studio
-  * Android Studio is the official Integrated Development Environment (IDE) for Android app development. More about details >>> [click here](https://developer.android.com/studio/intro)
+  * Android Studio is the official Integrated Development Environment (IDE) for Android app development. More about details >> [click here](https://developer.android.com/studio/intro)
 
 I chose the random number generation application because of the opportunity to use it in board games and other applications, and because I thought it would be relatively easy to develop.
 
@@ -62,7 +62,7 @@ I felt this experience was particularly difficult for me, especially the front-e
 
 In high school, I became interested in the use of algorithms and data analysis using Python.　In high school, I became interested in the use of algorithms and data analysis using Python. Because I learned that it can solve a wide range of problems from familiar issues to social problems.
 
-For more information about research in high school, please see the article! >>> [click here](https://kanatonishiura.com/blog/my_research/)
+For more information about research in high school, please see the article! >> [click here](https://kanatonishiura.com/blog/my_research/)
 
 
 ## Summary
