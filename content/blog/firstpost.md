@@ -1,6 +1,7 @@
 ---
-title: 'FirstPost'
-summary: 'My First Post!!'
+title: 'First Post'
+summary: 'Welcome to my digital garden!'
+description: 'Welcome to my digital garden!'
 date: 2024-01-06T23:01:50+09:00
 author: 'Kanato Nishiura'
 weight: 80
