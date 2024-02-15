@@ -1,5 +1,5 @@
 ---
-title: "Why computer sciece ? 🧑🏻‍💻"
+title: "Why computer science ? 🧑🏻‍💻"
 summary: "The reason why I decided to study computer science"
 description: "The reason why I decided to study computer science"
 date: 2024-02-15T09:49:18+09:00
