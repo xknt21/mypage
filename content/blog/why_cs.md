@@ -25,7 +25,7 @@ Today, I would like to show you why I decided to study computer science.
 My father is working as a system engineer.  
 So I had a lot of opportunities to use computer since I was a child 💻
 
-When I was in the first grade of elementary school, I bought my own computer and started to use it enthusiastically. Also, I often saw my father working up close, so I somehow thought that I want to work using a computer like him.
+When I was in the first grade of elementary school, I bought my own computer and started to use it enthusiastically. Also, I often saw my father working up close, so I somehow thought that I wanted to work using a computer like him.
 
 
 ## Junior High School experience
@@ -60,7 +60,7 @@ I felt this experience was particularly difficult for me, especially the front-e
 
 ## High School experience
 
-In high school, I became interested in the use of algorithms and data analysis using Python. In high school, I became interested in the use of algorithms and data analysis using Python. Because I learned that it can solve a wide range of problems from familiar issues to social problems.
+In high school, I became interested in the use of algorithms and data analysis using Python. Because I learned that it can solve a wide range of problems from familiar issues to social problems.
 
 For more information about research in high school, please see this post! >> [click here](https://kanatonishiura.com/blog/my_research/)
 
