@@ -60,9 +60,9 @@ I felt this experience was particularly difficult for me, especially the front-e
 
 ## High School experience
 
-In high school, I became interested in the use of algorithms and data analysis using Python.　In high school, I became interested in the use of algorithms and data analysis using Python. Because I learned that it can solve a wide range of problems from familiar issues to social problems.
+In high school, I became interested in the use of algorithms and data analysis using Python. In high school, I became interested in the use of algorithms and data analysis using Python. Because I learned that it can solve a wide range of problems from familiar issues to social problems.
 
-For more information about research in high school, please see the article! >> [click here](https://kanatonishiura.com/blog/my_research/)
+For more information about research in high school, please see this post! >> [click here](https://kanatonishiura.com/blog/my_research/)
 
 
 ## Summary
