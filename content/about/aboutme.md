@@ -21,7 +21,7 @@ ShowPostNavLinks: false
   * track and field, road bike
 
 * Hobby
-  * running🏃🏻, cycling🚴🏻, rock music🥁
+  * running🏃🏻, cycling🚴🏻, skiing⛷️, rock music🥁
 
 ![Imgur](https://i.imgur.com/kb7Qr8C.jpg)
 *my roadbike!*
