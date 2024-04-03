@@ -38,4 +38,4 @@ ShowPostNavLinks: false
   * https://www.ipsj.or.jp/event/taikai/85/85PosterSession/ipsj_poster/pdf/8003.pdf
 
 # Certifications
-Coming soon!
+TOEIC L&R 710
