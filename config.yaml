@@ -65,6 +65,11 @@ menu:
        name: Blog
        url: /blog
        weight: 10
+     - identifier: Archives
+       name: Archives
+       url: /archives
+       weight: 15
+    
 
 outputs:
   home:
