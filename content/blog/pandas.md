@@ -2,7 +2,7 @@
 title: "Introduction to pandas 🧑🏻"
 summary: "Overview of pandas for new users"
 description: "Overview of pandas for new users"
-date: 2024-08-08T02:41:01+09:00
+date: 2024-08-24T02:41:01+09:00
 author: "Kanato Nishiura"
 showToc: true
 TocOpen: false
