@@ -29,7 +29,7 @@ params:
           - name: github
             url: "https://github.com/xknt21"
 
-  contentDir: content/blog/
+  contentDir: content/blogs/
   staticDir: static/
   publishDir: "data"
   profileMode:
@@ -44,8 +44,8 @@ params:
       buttons:
         - name: About Me
           url: /about/aboutme
-        - name: Blog
-          url: /blog
+        - name: Blogs
+          url: /blogs
 
       fuseOpts:
          isCaseSensitive: false
@@ -61,9 +61,9 @@ menu:
        name: About Me
        url: /about/aboutme
        weight: 5
-     - identifier: Blog
-       name: Blog
-       url: /blog
+     - identifier: Blogs
+       name: Blogs
+       url: /blogs
        weight: 10
      - identifier: Archives
        name: Archives
