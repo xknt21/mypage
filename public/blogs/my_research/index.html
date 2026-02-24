@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>About my research in high school👨🏼‍🔬 | Kanato Nishiura</title>
+<meta name="keywords" content="">
+<meta name="description" content="Research motivation and summary">
+<meta name="author" content="Kanato Nishiura">
+<link rel="canonical" href="https://kanatonishiura.com/blogs/my_research/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://kanatonishiura.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kanatonishiura.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kanatonishiura.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://kanatonishiura.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://kanatonishiura.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://kanatonishiura.com/blogs/my_research/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://kanatonishiura.com/blogs/my_research/">
+  <meta property="og:site_name" content="Kanato Nishiura">
+  <meta property="og:title" content="About my research in high school👨🏼‍🔬">
+  <meta property="og:description" content="Research motivation and summary">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2024-02-07T11:26:23+09:00">
+    <meta property="article:modified_time" content="2024-02-07T11:26:23+09:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About my research in high school👨🏼‍🔬">
+<meta name="twitter:description" content="Research motivation and summary">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://kanatonishiura.com/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "About my research in high school👨🏼‍🔬",
+      "item": "https://kanatonishiura.com/blogs/my_research/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "About my research in high school👨🏼‍🔬",
+  "name": "About my research in high school👨🏼‍🔬",
+  "description": "Research motivation and summary",
+  "keywords": [
+    
+  ],
+  "articleBody": "I did a research project in my high school on the topic of “Creating a class schedule with a more constant daily load using a genetic algorithm”. Today, I would like to explain the motivation for this study and give a brief overview.\nResearch motivation Our high school’s current class schedule was unsatisfactory because the load for students was unevenly distributed from day to day, such as very heavy textbooks to bring to school on one day, a very large number of assignments, and a lot of classroom movement.\nHowever, there are so many combinations of class schedule that it is difficult to examine them all, so I used a genetic algorithm that can derive some practical solutions in a short time.\ngenetic algorithm A method for solving both constrained and unconstrained optimization problems that is based on natural selection, the process that drives biological evolution. Research summary 1. Define each subject load The five items of “weight of luggage,” “travel time,” “amount of work,” “physical strength,” and “mental strength” were used as the load and rated on a 4-point scale from 0 to 3.\nThe accuracy of the figures here is not the main theme, so we evaluated them ourselves.\n2. Programs using genetic algorithms in Python Program Details Create k number of random class schedules　(This is the first generation)\nTake the standard deviation for the sum of the loads for each day of the week　(This is the evaluation value for that class schedule)\nApply genetic algorithm\n3. Comparison with class schedule used in high school The class schedule used in the high school has an evaluation value of “5.97”.\nHowever, after applying the genetic algorithm for 500 generations with 20 individuals and 5 elites, the evaluation value was “0.45”.\nindividuals\nNumber of class schedules per generation elites\nThe top five smallest class schedule evaluation values in a generation, which are passed on to the next generation. Click here for the code\nThoughts This research was first project for me.\nThere were many things that did not go well, but we were able to proceed with the advice of those around us.\nI would like to use the perseverance and problem-solving skills I gained from this experience in my next research project.　Thanks for reading this far!\nSee you in the next post!\n",
+  "wordCount" : "386",
+  "inLanguage": "en",
+  "datePublished": "2024-02-07T11:26:23+09:00",
+  "dateModified": "2024-02-07T11:26:23+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "Kanato Nishiura"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kanatonishiura.com/blogs/my_research/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kanato Nishiura",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kanatonishiura.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://kanatonishiura.com/" accesskey="h" title="Kanato Nishiura (Alt + H)">Kanato Nishiura</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://kanatonishiura.com/about/aboutme" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/blogs" title="Blogs">
+                    <span>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://kanatonishiura.com/">Home</a>&nbsp;»&nbsp;<a href="https://kanatonishiura.com/blogs/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      About my research in high school👨🏼‍🔬
+    </h1>
+    <div class="post-description">
+      Research motivation and summary
+    </div>
+    <div class="post-meta"><span title='2024-02-07 11:26:23 +0900 JST'>February 7, 2024</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>Kanato Nishiura</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#research-motivation" aria-label="Research motivation">Research motivation</a></li>
+                <li>
+                    <a href="#research-summary" aria-label="Research summary">Research summary</a><ul>
+                        
+                <li>
+                    <a href="#1-define-each-subject-load" aria-label="1. Define each subject load">1. Define each subject load</a></li>
+                <li>
+                    <a href="#2-programs-using-genetic-algorithms-in-python" aria-label="2. Programs using genetic algorithms in Python">2. Programs using genetic algorithms in Python</a></li>
+                <li>
+                    <a href="#3-comparison-with-class-schedule-used-in-high-school" aria-label="3. Comparison with class schedule used in high school">3. Comparison with class schedule used in high school</a></li>
+                <li>
+                    <a href="#thoughts" aria-label="Thoughts">Thoughts</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>I did a research project in my high school on the topic of <a href="https://www.ipsj.or.jp/event/taikai/85/85PosterSession/ipsj_poster/pdf/8003.pdf">&ldquo;Creating a class schedule with a more constant daily load using a genetic algorithm&rdquo;</a>. Today, I would like to explain the motivation for this study and give a brief overview.</p>
+<h2 id="research-motivation">Research motivation<a hidden class="anchor" aria-hidden="true" href="#research-motivation">#</a></h2>
+<p>Our high school&rsquo;s current class schedule was unsatisfactory because the load for students was unevenly distributed from day to day, such as very heavy textbooks to bring to school on one day, a very large number of assignments, and a lot of classroom movement.</p>
+<p>However, there are so many combinations of class schedule that it is difficult to examine them all, so I used a genetic algorithm that can  derive some practical solutions in a short time.</p>
+<ul>
+<li>genetic algorithm
+<ul>
+<li>A method for solving both constrained and unconstrained optimization problems that is based on natural selection, the process that drives biological evolution.</li>
+</ul>
+</li>
+</ul>
+<h2 id="research-summary">Research summary<a hidden class="anchor" aria-hidden="true" href="#research-summary">#</a></h2>
+<h3 id="1-define-each-subject-load">1. Define each subject load<a hidden class="anchor" aria-hidden="true" href="#1-define-each-subject-load">#</a></h3>
+<p>The five items of &ldquo;weight of luggage,&rdquo; &ldquo;travel time,&rdquo; &ldquo;amount of work,&rdquo; &ldquo;physical strength,&rdquo; and &ldquo;mental strength&rdquo; were used as the load and rated on a 4-point scale from 0 to 3.<br>
+The accuracy of the figures here is not the main theme, so we evaluated them ourselves.</p>
+<h3 id="2-programs-using-genetic-algorithms-in-python">2. Programs using genetic algorithms in Python<a hidden class="anchor" aria-hidden="true" href="#2-programs-using-genetic-algorithms-in-python">#</a></h3>
+<ul>
+<li>Program Details
+<ul>
+<li>
+<p>Create k number of random class schedules　(This is the first generation)</p>
+</li>
+<li>
+<p>Take the standard deviation for the sum of the loads for each day of the week　(This is the evaluation value for that class schedule)</p>
+</li>
+<li>
+<p>Apply genetic algorithm</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-comparison-with-class-schedule-used-in-high-school">3. Comparison with class schedule used in high school<a hidden class="anchor" aria-hidden="true" href="#3-comparison-with-class-schedule-used-in-high-school">#</a></h3>
+<p>The class schedule used in the high school has an evaluation value of &ldquo;5.97&rdquo;.</p>
+<p>However, after applying the genetic algorithm for 500 generations with 20 individuals and 5 elites, the evaluation value was &ldquo;0.45&rdquo;.</p>
+<ul>
+<li>
+<p>individuals</p>
+<ul>
+<li>Number of class schedules per generation</li>
+</ul>
+</li>
+<li>
+<p>elites</p>
+<ul>
+<li>The top five smallest class schedule evaluation values in a generation, which are passed on to the next generation.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://github.com/xknt21/ga_timetable/blob/main/GA_timetable.py">Click here for the code</a></p>
+<h3 id="thoughts">Thoughts<a hidden class="anchor" aria-hidden="true" href="#thoughts">#</a></h3>
+<p>This research was first project for me.<br>
+There were many things that did not go well, but we were able to proceed with the advice of those around us.<br>
+I would like to use the perseverance and problem-solving skills I gained from this experience in my next research project.　　</p>
+<p>Thanks for reading this far!<br>
+See you in the next post!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://kanatonishiura.com/blogs/why_cs/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Why computer science ? 🧑🏻‍💻</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://kanatonishiura.com/">Kanato Nishiura</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
