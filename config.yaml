@@ -16,6 +16,7 @@ editPost:
     appendFilePath: true 
 
 params:
+  social: []
   cover:
       linkFullImages: true
       hideInList: false
