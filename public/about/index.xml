@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Abouts on Kanato Nishiura</title>
+    <link>https://kanatonishiura.com/about/</link>
+    <description>Recent content in Abouts on Kanato Nishiura</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Jan 2024 16:26:24 +0900</lastBuildDate>
+    <atom:link href="https://kanatonishiura.com/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://kanatonishiura.com/about/aboutme/</link>
+      <pubDate>Mon, 08 Jan 2024 16:26:24 +0900</pubDate>
+      <guid>https://kanatonishiura.com/about/aboutme/</guid>
+      <description>About Me</description>
+    </item>
+  </channel>
+</rss>

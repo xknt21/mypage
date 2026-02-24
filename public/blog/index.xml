@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogs on Kanato Nishiura</title>
+    <link>https://kanatonishiura.com/blog/</link>
+    <description>Recent content in Blogs on Kanato Nishiura</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Aug 2024 02:41:01 +0900</lastBuildDate>
+    <atom:link href="https://kanatonishiura.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Post</title>
+      <link>https://kanatonishiura.com/blog/firstpost/</link>
+      <pubDate>Sat, 06 Jan 2024 23:01:50 +0900</pubDate>
+      <guid>https://kanatonishiura.com/blog/firstpost/</guid>
+      <description>Welcome to my digital garden!</description>
+    </item>
+    <item>
+      <title>Introduction to pandas 🧑🏻</title>
+      <link>https://kanatonishiura.com/blog/pandas/</link>
+      <pubDate>Sat, 24 Aug 2024 02:41:01 +0900</pubDate>
+      <guid>https://kanatonishiura.com/blog/pandas/</guid>
+      <description>Overview of pandas for new users</description>
+    </item>
+    <item>
+      <title>PuLP Tutorial 💻</title>
+      <link>https://kanatonishiura.com/blog/pulp/</link>
+      <pubDate>Sun, 04 Aug 2024 15:00:45 +0900</pubDate>
+      <guid>https://kanatonishiura.com/blog/pulp/</guid>
+      <description>How to solve optimization problem with Python linear programming</description>
+    </item>
+    <item>
+      <title>What I felt in the spring semestar, 1st year of Uni 🎓</title>
+      <link>https://kanatonishiura.com/blog/1st_spring/</link>
+      <pubDate>Thu, 30 May 2024 11:40:47 +0900</pubDate>
+      <guid>https://kanatonishiura.com/blog/1st_spring/</guid>
+      <description>What I&amp;#39;m thinking now, what I&amp;#39;m studying, and my future prospects</description>
+    </item>
+    <item>
+      <title>Why computer science ? 🧑🏻‍💻</title>
+      <link>https://kanatonishiura.com/blog/why_cs/</link>
+      <pubDate>Thu, 15 Feb 2024 09:49:18 +0900</pubDate>
+      <guid>https://kanatonishiura.com/blog/why_cs/</guid>
+      <description>The reason why I decided to study computer science</description>
+    </item>
+    <item>
+      <title>About my research in high school👨🏼‍🔬</title>
+      <link>https://kanatonishiura.com/blog/my_research/</link>
+      <pubDate>Wed, 07 Feb 2024 11:26:23 +0900</pubDate>
+      <guid>https://kanatonishiura.com/blog/my_research/</guid>
+      <description>Research motivation and summary</description>
+    </item>
+  </channel>
+</rss>

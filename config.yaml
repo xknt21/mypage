@@ -3,7 +3,7 @@ languageCode: en-us
 title: Kanato Nishiura
 theme: PaperMod
 
-googleAnalytics: G-WZV80VBNE5
+#googleAnalytics: G-WZV80VBNE5
 
 assets:
     # disableHLJS: true # to disable highlight.js
@@ -16,7 +16,8 @@ editPost:
     appendFilePath: true 
 
 params:
-  social: []
+  author: "Kanato Nishiura"
+  Social: []
   cover:
       linkFullImages: true
       hideInList: false
