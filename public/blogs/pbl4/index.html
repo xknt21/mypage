@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Develop a Web-Based Recipe Manager Application 🧑🏻‍💻 | Kanato Nishiura</title>
+<meta name="keywords" content="">
+<meta name="description" content="Background &amp; Summary">
+<meta name="author" content="Kanato Nishiura">
+<link rel="canonical" href="https://kanatonishiura.com/blogs/pbl4/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://kanatonishiura.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kanatonishiura.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kanatonishiura.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://kanatonishiura.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://kanatonishiura.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://kanatonishiura.com/blogs/pbl4/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://kanatonishiura.com/blogs/pbl4/">
+  <meta property="og:site_name" content="Kanato Nishiura">
+  <meta property="og:title" content="Develop a Web-Based Recipe Manager Application 🧑🏻‍💻">
+  <meta property="og:description" content="Background &amp; Summary">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2026-01-09T10:00:01+09:00">
+    <meta property="article:modified_time" content="2026-01-09T10:00:01+09:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Develop a Web-Based Recipe Manager Application 🧑🏻‍💻">
+<meta name="twitter:description" content="Background &amp; Summary">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://kanatonishiura.com/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Develop a Web-Based Recipe Manager Application 🧑🏻‍💻",
+      "item": "https://kanatonishiura.com/blogs/pbl4/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Develop a Web-Based Recipe Manager Application 🧑🏻‍💻",
+  "name": "Develop a Web-Based Recipe Manager Application 🧑🏻‍💻",
+  "description": "Background \u0026 Summary",
+  "keywords": [
+    
+  ],
+  "articleBody": "Full Documentation: Click Here\n1. Project Overview and Strategic Motivation The primary purpose of the system is to address the “daily challenge of deciding what to cook” while eliminating the need for scattered notes and screenshots.\nSystem Description: Foood is a web-based platform that integrates recipe storage, weekly meal planning, and automatic shopping list generation. Centralization: It provides a structured, user-specific experience through secure authentication to reduce the mental burden of managing multiple cooking resources. Persistent Challenges: The project specifically targets Recipe Disorganization, Time-Consuming Meal Planning, Inefficient Shopping, and Food Waste. Unified Workflow: By linking recipe management directly with ingredient aggregation, the system streamlines the transition from thinking up a meal to executing a grocery run. 2. System Objectives and Scope The development team identified five core objectives to ensure the platform’s utility for home cooks, families, and students.\nCentralized Recipe Storage: Implementing a structured database capable of storing ingredients, multi-step instructions, high-quality images, and categorization tags. Intelligent Meal Planning: Enabling a 7-day planning window with smart randomization features that respect dietary categories. Automated Shopping List Generation: Aggregating every ingredient from a planned week into a categorized, actionable list. Multi-Device Accessibility: Utilizing network hosting to allow users to access their plans and lists from any device on their local network. Recipe Sharing: Implementing a URL-based sharing system for easy distribution and importing of culinary data. 3. Detailed Functional Requirements (FR) The system’s functionality is categorized into five critical modules that define the user experience.\n3.1 User and Profile Management Authentication: The system supports secure user registration and login utilizing JWT-based session persistence. Configuration: Users can toggle between “Smart Match” or “Random” modes for the automated planner. 3.2 Recipe Management System CRUD Operations: Users have the ability to Create, Read, Update, and Delete recipes. Data Fields: Each entry supports a title, line-separated ingredients, instructions, tags, and optional image uploads. Discovery: The interface supports keyword searching, tag-based filtering, and paginated sorting for large collections. 3.3 Weekly Meal Planning Planning Grid: A comprehensive $7\\times4$ grid representing seven days and four meal slots (Breakfast, Lunch, Dinner, Snacks). Auto-Fill Algorithms: Support for “Smart Match” which filters recipes by the appropriate meal type tag before assigning them to a slot. 3.4 Shopping List Management Aggregation: The system fetches all recipes in the current plan and extracts their ingredients into a single view. Item Management: Support for checking/unchecking items, bulk actions, and clearing completed items to refresh the view. 3.5 Recipe Sharing Capabilities Encoding: Recipes are shared via base64-encoded URLs. Importing: Recipients can view shared recipes and import them directly into their own accounts with a single confirmation. 4. Non-Functional Requirements (NFR) To ensure professional-grade reliability, the system adheres to several technical standards.\nPerformance: The system must meet specific targets for API response times and frontend rendering speeds. Usability: The UI is designed to be mobile-responsive with touch-optimized controls and clear validation feedback. Security: High priority is placed on secure password storage, token expiration handling, and access control. Maintainability: The codebase follows RESTful design principles and modular architecture for future scalability. 5. Architectural and System Design The application utilizes a classic 3-tier client-server architecture to separate the presentation, logic, and data layers.\n5.1 Presentation Layer (Frontend) Technology: Developed as a Single Page Application (SPA) using React 19.2 and the Vite build tool. Session Management: JWT tokens are stored in the browser’s localStorage to maintain a stateless yet secure session. 5.2 Application Layer (Backend) Framework: Built with FastAPI to ensure high performance and automatic OpenAPI documentation. Subcomponents: API Routes: Manages the endpoint logic for recipes, plans, and users. Security (JWT Auth): Validates every incoming request to ensure only authorized users access data. Business Logic: Executes the complex algorithms for meal randomization and ingredient deduplication. 5.3 Data Layer (Database) Engine: Uses SQLite as a zero-configuration embedded database for ease of deployment. ORM: Utilizes SQLAlchemy to manage relational data through Python classes. Schema: Consists of nine tables, including core entities like users and recipes, and junction tables like recipe_ingredients. 6. Behavioral Analysis and Logic The project report outlines specific behavioral flows that govern how data moves through the system.\n6.1 The Shopping List Workflow Authentication Check: Validates the user’s current session. Meal Plan Retrieval: Fetches the 28-slot grid for the selected week. Ingredient Extraction: Pulls raw ingredient data from every recipe linked to the plan. Parallel Operations: Aggregation: Merges duplicate items (e.g., combining 2 eggs from one recipe with 3 eggs from another). Categorization: Sorts items into Produce, Dairy, Meat, Grains, Pantry, and Other. UI Refresh: Displays the finalized, sorted list to the user. 6.2 The Recipe Lifecycle A recipe moves through various states during its existence:\nStored: The initial state once a recipe is created and saved to the database. In Meal Plan: A state triggered when a recipe is assigned to a specific day and slot. Being Edited: A temporary state where the recipe data is being modified by the user. Deletion: A final action that removes the recipe and all its associated meal plan entries and tags. 7. Implementation Highlights and Tech Stack The development utilized a modern stack to ensure rapid development and reliable performance.\nFrontend Tools: React 19.2, Vite, Lucide React for iconography, and standard CSS for styling. Backend Tools: FastAPI, Pydantic for data validation, and Python-Jose for JWT handling. Security Tools: Hashing via Passlib to ensure passwords are never stored in plain text. Deployment: The system is configured to run on a local machine, making it accessible via localhost or a network IP for cross-device testing. 8. Evaluation, Testing, and Validation The application underwent a rigorous testing strategy to ensure all functional requirements were met.\nMulti-Platform Testing: Validated on Windows, macOS, and Android devices using Chrome and Edge browsers. API Validation: Endpoints were tested using curl commands to verify correct JSON formatting and status codes. Integration Testing: Monitored terminal logs to verify the seamless flow of data between the React frontend and FastAPI backend. Test Cases: Sixteen primary test cases were executed, covering everything from user registration (Test 01) to clearing purchased items (Test 16). All sixteen cases achieved a “Pass” status. 9. Discussion and Future Extensions While the system is fully functional, the team identified several challenges and areas for future growth.\nKey Challenges: Merging code from different branches led to integration issues, and teammate participation variances increased the workload for active members. UML Utility: The team credited Use Case and Sequence diagrams for helping identify where authentication checks were strictly required in API calls. Future Roadmap: Grocery Realism: Improving the list logic to normalize measurements into standard retail package sizes. Nutritional Approximation: Integrating external APIs to provide calorie and macronutrient data. Ingredient Substitutions: Developing a system to suggest alternatives based on dietary needs or ingredient availability. Cloud Deployment: Moving the system from a local host to a public cloud environment for universal access. 10. Conclusion The Foood Recipe Manager project successfully delivered a functional full-stack application that addresses the core complexities of home meal management. Despite setbacks encountered during development, the final product demonstrates a coherent solution that integrates authentication, recipe CRUD, and automated planning. The project provided the developers with deep experience in software design, RESTful API architecture, and relational database management. The resulting platform stands as a usable tool that effectively reduces the time and frustration involved in daily cooking and grocery shopping.\n",
+  "wordCount" : "1213",
+  "inLanguage": "en",
+  "datePublished": "2026-01-09T10:00:01+09:00",
+  "dateModified": "2026-01-09T10:00:01+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "Kanato Nishiura"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kanatonishiura.com/blogs/pbl4/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kanato Nishiura",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kanatonishiura.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://kanatonishiura.com/" accesskey="h" title="Kanato Nishiura (Alt + H)">Kanato Nishiura</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://kanatonishiura.com/about/aboutme" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/blogs" title="Blogs">
+                    <span>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://kanatonishiura.com/">Home</a>&nbsp;»&nbsp;<a href="https://kanatonishiura.com/blogs/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Develop a Web-Based Recipe Manager Application 🧑🏻‍💻
+    </h1>
+    <div class="post-description">
+      Background &amp; Summary
+    </div>
+    <div class="post-meta"><span title='2026-01-09 10:00:01 +0900 JST'>January 9, 2026</span>&nbsp;·&nbsp;<span>6 min</span>&nbsp;·&nbsp;<span>Kanato Nishiura</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-project-overview-and-strategic-motivation" aria-label="1. Project Overview and Strategic Motivation">1. Project Overview and Strategic Motivation</a></li>
+                <li>
+                    <a href="#2-system-objectives-and-scope" aria-label="2. System Objectives and Scope">2. System Objectives and Scope</a></li>
+                <li>
+                    <a href="#3-detailed-functional-requirements-fr" aria-label="3. Detailed Functional Requirements (FR)">3. Detailed Functional Requirements (FR)</a><ul>
+                        
+                <li>
+                    <a href="#31-user-and-profile-management" aria-label="3.1 User and Profile Management">3.1 User and Profile Management</a></li>
+                <li>
+                    <a href="#32-recipe-management-system" aria-label="3.2 Recipe Management System">3.2 Recipe Management System</a></li>
+                <li>
+                    <a href="#33-weekly-meal-planning" aria-label="3.3 Weekly Meal Planning">3.3 Weekly Meal Planning</a></li>
+                <li>
+                    <a href="#34-shopping-list-management" aria-label="3.4 Shopping List Management">3.4 Shopping List Management</a></li>
+                <li>
+                    <a href="#35-recipe-sharing-capabilities" aria-label="3.5 Recipe Sharing Capabilities">3.5 Recipe Sharing Capabilities</a></li></ul>
+                </li>
+                <li>
+                    <a href="#4-non-functional-requirements-nfr" aria-label="4. Non-Functional Requirements (NFR)">4. Non-Functional Requirements (NFR)</a></li>
+                <li>
+                    <a href="#5-architectural-and-system-design" aria-label="5. Architectural and System Design">5. Architectural and System Design</a><ul>
+                        
+                <li>
+                    <a href="#51-presentation-layer-frontend" aria-label="5.1 Presentation Layer (Frontend)">5.1 Presentation Layer (Frontend)</a></li>
+                <li>
+                    <a href="#52-application-layer-backend" aria-label="5.2 Application Layer (Backend)">5.2 Application Layer (Backend)</a></li>
+                <li>
+                    <a href="#53-data-layer-database" aria-label="5.3 Data Layer (Database)">5.3 Data Layer (Database)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#6-behavioral-analysis-and-logic" aria-label="6. Behavioral Analysis and Logic">6. Behavioral Analysis and Logic</a><ul>
+                        
+                <li>
+                    <a href="#61-the-shopping-list-workflow" aria-label="6.1 The Shopping List Workflow">6.1 The Shopping List Workflow</a></li>
+                <li>
+                    <a href="#62-the-recipe-lifecycle" aria-label="6.2 The Recipe Lifecycle">6.2 The Recipe Lifecycle</a></li></ul>
+                </li>
+                <li>
+                    <a href="#7-implementation-highlights-and-tech-stack" aria-label="7. Implementation Highlights and Tech Stack">7. Implementation Highlights and Tech Stack</a></li>
+                <li>
+                    <a href="#8-evaluation-testing-and-validation" aria-label="8. Evaluation, Testing, and Validation">8. Evaluation, Testing, and Validation</a></li>
+                <li>
+                    <a href="#9-discussion-and-future-extensions" aria-label="9. Discussion and Future Extensions">9. Discussion and Future Extensions</a></li>
+                <li>
+                    <a href="#10-conclusion" aria-label="10. Conclusion">10. Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><strong>Full Documentation</strong>: <a href="/pbl4.pdf">Click Here</a></p>
+<h3 id="1-project-overview-and-strategic-motivation"><strong>1. Project Overview and Strategic Motivation</strong><a hidden class="anchor" aria-hidden="true" href="#1-project-overview-and-strategic-motivation">#</a></h3>
+<p>The primary purpose of the system is to address the &ldquo;daily challenge of deciding what to cook&rdquo; while eliminating the need for scattered notes and screenshots.</p>
+<ul>
+<li><strong>System Description</strong>: Foood is a web-based platform that integrates recipe storage, weekly meal planning, and automatic shopping list generation.</li>
+<li><strong>Centralization</strong>: It provides a structured, user-specific experience through secure authentication to reduce the mental burden of managing multiple cooking resources.</li>
+<li><strong>Persistent Challenges</strong>: The project specifically targets Recipe Disorganization, Time-Consuming Meal Planning, Inefficient Shopping, and Food Waste.</li>
+<li><strong>Unified Workflow</strong>: By linking recipe management directly with ingredient aggregation, the system streamlines the transition from thinking up a meal to executing a grocery run.</li>
+</ul>
+<hr>
+<h3 id="2-system-objectives-and-scope"><strong>2. System Objectives and Scope</strong><a hidden class="anchor" aria-hidden="true" href="#2-system-objectives-and-scope">#</a></h3>
+<p>The development team identified five core objectives to ensure the platform&rsquo;s utility for home cooks, families, and students.</p>
+<ul>
+<li><strong>Centralized Recipe Storage</strong>: Implementing a structured database capable of storing ingredients, multi-step instructions, high-quality images, and categorization tags.</li>
+<li><strong>Intelligent Meal Planning</strong>: Enabling a 7-day planning window with smart randomization features that respect dietary categories.</li>
+<li><strong>Automated Shopping List Generation</strong>: Aggregating every ingredient from a planned week into a categorized, actionable list.</li>
+<li><strong>Multi-Device Accessibility</strong>: Utilizing network hosting to allow users to access their plans and lists from any device on their local network.</li>
+<li><strong>Recipe Sharing</strong>: Implementing a URL-based sharing system for easy distribution and importing of culinary data.</li>
+</ul>
+<hr>
+<h3 id="3-detailed-functional-requirements-fr"><strong>3. Detailed Functional Requirements (FR)</strong><a hidden class="anchor" aria-hidden="true" href="#3-detailed-functional-requirements-fr">#</a></h3>
+<p>The system’s functionality is categorized into five critical modules that define the user experience.</p>
+<h4 id="31-user-and-profile-management"><strong>3.1 User and Profile Management</strong><a hidden class="anchor" aria-hidden="true" href="#31-user-and-profile-management">#</a></h4>
+<ul>
+<li><strong>Authentication</strong>: The system supports secure user registration and login utilizing JWT-based session persistence.</li>
+<li><strong>Configuration</strong>: Users can toggle between &ldquo;Smart Match&rdquo; or &ldquo;Random&rdquo; modes for the automated planner.</li>
+</ul>
+<h4 id="32-recipe-management-system"><strong>3.2 Recipe Management System</strong><a hidden class="anchor" aria-hidden="true" href="#32-recipe-management-system">#</a></h4>
+<ul>
+<li><strong>CRUD Operations</strong>: Users have the ability to Create, Read, Update, and Delete recipes.</li>
+<li><strong>Data Fields</strong>: Each entry supports a title, line-separated ingredients, instructions, tags, and optional image uploads.</li>
+<li><strong>Discovery</strong>: The interface supports keyword searching, tag-based filtering, and paginated sorting for large collections.</li>
+</ul>
+<h4 id="33-weekly-meal-planning"><strong>3.3 Weekly Meal Planning</strong><a hidden class="anchor" aria-hidden="true" href="#33-weekly-meal-planning">#</a></h4>
+<ul>
+<li><strong>Planning Grid</strong>: A comprehensive $7\times4$ grid representing seven days and four meal slots (Breakfast, Lunch, Dinner, Snacks).</li>
+<li><strong>Auto-Fill Algorithms</strong>: Support for &ldquo;Smart Match&rdquo; which filters recipes by the appropriate meal type tag before assigning them to a slot.</li>
+</ul>
+<h4 id="34-shopping-list-management"><strong>3.4 Shopping List Management</strong><a hidden class="anchor" aria-hidden="true" href="#34-shopping-list-management">#</a></h4>
+<ul>
+<li><strong>Aggregation</strong>: The system fetches all recipes in the current plan and extracts their ingredients into a single view.</li>
+<li><strong>Item Management</strong>: Support for checking/unchecking items, bulk actions, and clearing completed items to refresh the view.</li>
+</ul>
+<h4 id="35-recipe-sharing-capabilities"><strong>3.5 Recipe Sharing Capabilities</strong><a hidden class="anchor" aria-hidden="true" href="#35-recipe-sharing-capabilities">#</a></h4>
+<ul>
+<li><strong>Encoding</strong>: Recipes are shared via base64-encoded URLs.</li>
+<li><strong>Importing</strong>: Recipients can view shared recipes and import them directly into their own accounts with a single confirmation.</li>
+</ul>
+<hr>
+<h3 id="4-non-functional-requirements-nfr"><strong>4. Non-Functional Requirements (NFR)</strong><a hidden class="anchor" aria-hidden="true" href="#4-non-functional-requirements-nfr">#</a></h3>
+<p>To ensure professional-grade reliability, the system adheres to several technical standards.</p>
+<ul>
+<li><strong>Performance</strong>: The system must meet specific targets for API response times and frontend rendering speeds.</li>
+<li><strong>Usability</strong>: The UI is designed to be mobile-responsive with touch-optimized controls and clear validation feedback.</li>
+<li><strong>Security</strong>: High priority is placed on secure password storage, token expiration handling, and access control.</li>
+<li><strong>Maintainability</strong>: The codebase follows RESTful design principles and modular architecture for future scalability.</li>
+</ul>
+<hr>
+<h3 id="5-architectural-and-system-design"><strong>5. Architectural and System Design</strong><a hidden class="anchor" aria-hidden="true" href="#5-architectural-and-system-design">#</a></h3>
+<p>The application utilizes a classic <strong>3-tier client-server architecture</strong> to separate the presentation, logic, and data layers.</p>
+<h4 id="51-presentation-layer-frontend"><strong>5.1 Presentation Layer (Frontend)</strong><a hidden class="anchor" aria-hidden="true" href="#51-presentation-layer-frontend">#</a></h4>
+<ul>
+<li><strong>Technology</strong>: Developed as a Single Page Application (SPA) using <strong>React 19.2</strong> and the <strong>Vite</strong> build tool.</li>
+<li><strong>Session Management</strong>: JWT tokens are stored in the browser&rsquo;s <code>localStorage</code> to maintain a stateless yet secure session.</li>
+</ul>
+<h4 id="52-application-layer-backend"><strong>5.2 Application Layer (Backend)</strong><a hidden class="anchor" aria-hidden="true" href="#52-application-layer-backend">#</a></h4>
+<ul>
+<li><strong>Framework</strong>: Built with <strong>FastAPI</strong> to ensure high performance and automatic OpenAPI documentation.</li>
+<li><strong>Subcomponents</strong>:
+<ul>
+<li><strong>API Routes</strong>: Manages the endpoint logic for recipes, plans, and users.</li>
+<li><strong>Security (JWT Auth)</strong>: Validates every incoming request to ensure only authorized users access data.</li>
+<li><strong>Business Logic</strong>: Executes the complex algorithms for meal randomization and ingredient deduplication.</li>
+</ul>
+</li>
+</ul>
+<h4 id="53-data-layer-database"><strong>5.3 Data Layer (Database)</strong><a hidden class="anchor" aria-hidden="true" href="#53-data-layer-database">#</a></h4>
+<ul>
+<li><strong>Engine</strong>: Uses <strong>SQLite</strong> as a zero-configuration embedded database for ease of deployment.</li>
+<li><strong>ORM</strong>: Utilizes <strong>SQLAlchemy</strong> to manage relational data through Python classes.</li>
+<li><strong>Schema</strong>: Consists of nine tables, including core entities like <code>users</code> and <code>recipes</code>, and junction tables like <code>recipe_ingredients</code>.</li>
+</ul>
+<hr>
+<h3 id="6-behavioral-analysis-and-logic"><strong>6. Behavioral Analysis and Logic</strong><a hidden class="anchor" aria-hidden="true" href="#6-behavioral-analysis-and-logic">#</a></h3>
+<p>The project report outlines specific behavioral flows that govern how data moves through the system.</p>
+<h4 id="61-the-shopping-list-workflow"><strong>6.1 The Shopping List Workflow</strong><a hidden class="anchor" aria-hidden="true" href="#61-the-shopping-list-workflow">#</a></h4>
+<ol>
+<li><strong>Authentication Check</strong>: Validates the user&rsquo;s current session.</li>
+<li><strong>Meal Plan Retrieval</strong>: Fetches the 28-slot grid for the selected week.</li>
+<li><strong>Ingredient Extraction</strong>: Pulls raw ingredient data from every recipe linked to the plan.</li>
+<li><strong>Parallel Operations</strong>:
+<ul>
+<li><strong>Aggregation</strong>: Merges duplicate items (e.g., combining 2 eggs from one recipe with 3 eggs from another).</li>
+<li><strong>Categorization</strong>: Sorts items into Produce, Dairy, Meat, Grains, Pantry, and Other.</li>
+</ul>
+</li>
+<li><strong>UI Refresh</strong>: Displays the finalized, sorted list to the user.</li>
+</ol>
+<h4 id="62-the-recipe-lifecycle"><strong>6.2 The Recipe Lifecycle</strong><a hidden class="anchor" aria-hidden="true" href="#62-the-recipe-lifecycle">#</a></h4>
+<p>A recipe moves through various states during its existence:</p>
+<ul>
+<li><strong>Stored</strong>: The initial state once a recipe is created and saved to the database.</li>
+<li><strong>In Meal Plan</strong>: A state triggered when a recipe is assigned to a specific day and slot.</li>
+<li><strong>Being Edited</strong>: A temporary state where the recipe data is being modified by the user.</li>
+<li><strong>Deletion</strong>: A final action that removes the recipe and all its associated meal plan entries and tags.</li>
+</ul>
+<hr>
+<h3 id="7-implementation-highlights-and-tech-stack"><strong>7. Implementation Highlights and Tech Stack</strong><a hidden class="anchor" aria-hidden="true" href="#7-implementation-highlights-and-tech-stack">#</a></h3>
+<p>The development utilized a modern stack to ensure rapid development and reliable performance.</p>
+<ul>
+<li><strong>Frontend Tools</strong>: React 19.2, Vite, Lucide React for iconography, and standard CSS for styling.</li>
+<li><strong>Backend Tools</strong>: FastAPI, Pydantic for data validation, and Python-Jose for JWT handling.</li>
+<li><strong>Security Tools</strong>: Hashing via Passlib to ensure passwords are never stored in plain text.</li>
+<li><strong>Deployment</strong>: The system is configured to run on a local machine, making it accessible via <code>localhost</code> or a network IP for cross-device testing.</li>
+</ul>
+<hr>
+<h3 id="8-evaluation-testing-and-validation"><strong>8. Evaluation, Testing, and Validation</strong><a hidden class="anchor" aria-hidden="true" href="#8-evaluation-testing-and-validation">#</a></h3>
+<p>The application underwent a rigorous testing strategy to ensure all functional requirements were met.</p>
+<ul>
+<li><strong>Multi-Platform Testing</strong>: Validated on Windows, macOS, and Android devices using Chrome and Edge browsers.</li>
+<li><strong>API Validation</strong>: Endpoints were tested using <code>curl</code> commands to verify correct JSON formatting and status codes.</li>
+<li><strong>Integration Testing</strong>: Monitored terminal logs to verify the seamless flow of data between the React frontend and FastAPI backend.</li>
+<li><strong>Test Cases</strong>: Sixteen primary test cases were executed, covering everything from user registration (Test 01) to clearing purchased items (Test 16). All sixteen cases achieved a &ldquo;Pass&rdquo; status.</li>
+</ul>
+<hr>
+<h3 id="9-discussion-and-future-extensions"><strong>9. Discussion and Future Extensions</strong><a hidden class="anchor" aria-hidden="true" href="#9-discussion-and-future-extensions">#</a></h3>
+<p>While the system is fully functional, the team identified several challenges and areas for future growth.</p>
+<ul>
+<li><strong>Key Challenges</strong>: Merging code from different branches led to integration issues, and teammate participation variances increased the workload for active members.</li>
+<li><strong>UML Utility</strong>: The team credited Use Case and Sequence diagrams for helping identify where authentication checks were strictly required in API calls.</li>
+<li><strong>Future Roadmap</strong>:
+<ul>
+<li><strong>Grocery Realism</strong>: Improving the list logic to normalize measurements into standard retail package sizes.</li>
+<li><strong>Nutritional Approximation</strong>: Integrating external APIs to provide calorie and macronutrient data.</li>
+<li><strong>Ingredient Substitutions</strong>: Developing a system to suggest alternatives based on dietary needs or ingredient availability.</li>
+<li><strong>Cloud Deployment</strong>: Moving the system from a local host to a public cloud environment for universal access.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="10-conclusion"><strong>10. Conclusion</strong><a hidden class="anchor" aria-hidden="true" href="#10-conclusion">#</a></h3>
+<p>The Foood Recipe Manager project successfully delivered a functional full-stack application that addresses the core complexities of home meal management. Despite setbacks encountered during development, the final product demonstrates a coherent solution that integrates authentication, recipe CRUD, and automated planning. The project provided the developers with deep experience in software design, RESTful API architecture, and relational database management. The resulting platform stands as a usable tool that effectively reduces the time and frustration involved in daily cooking and grocery shopping.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://kanatonishiura.com/blogs/internship/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>My Internship Experience as an AI Engineer 🧑🏻‍💻</span>
+  </a>
+  <a class="next" href="https://kanatonishiura.com/blogs/pbl3/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://kanatonishiura.com/">Kanato Nishiura</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
