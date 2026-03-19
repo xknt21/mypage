@@ -6,7 +6,7 @@
     <description>Recent content on Kanato Nishiura</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Aug 2024 02:41:01 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2026 12:38:01 +0900</lastBuildDate>
     <atom:link href="https://kanatonishiura.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post</title>
@@ -14,6 +14,13 @@
       <pubDate>Sat, 06 Jan 2024 23:01:50 +0900</pubDate>
       <guid>https://kanatonishiura.com/blogs/firstpost/</guid>
       <description>Welcome to my digital garden!</description>
+    </item>
+    <item>
+      <title>My Internship Experience as an AI Engineer 🧑🏻‍💻</title>
+      <link>https://kanatonishiura.com/blogs/internship/</link>
+      <pubDate>Thu, 19 Mar 2026 12:38:01 +0900</pubDate>
+      <guid>https://kanatonishiura.com/blogs/internship/</guid>
+      <description>What I did as an AI Engineer</description>
     </item>
     <item>
       <title>Introduction to pandas 🧑🏻</title>
