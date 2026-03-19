@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Develop a System for Tomato Quality Assessment 🧑🏻‍💻 | Kanato Nishiura</title>
+<meta name="keywords" content="">
+<meta name="description" content="Background &amp; Summary">
+<meta name="author" content="Kanato Nishiura">
+<link rel="canonical" href="https://kanatonishiura.com/blogs/pbl2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://kanatonishiura.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kanatonishiura.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kanatonishiura.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://kanatonishiura.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://kanatonishiura.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://kanatonishiura.com/blogs/pbl2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://kanatonishiura.com/blogs/pbl2/">
+  <meta property="og:site_name" content="Kanato Nishiura">
+  <meta property="og:title" content="Develop a System for Tomato Quality Assessment 🧑🏻‍💻">
+  <meta property="og:description" content="Background &amp; Summary">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-01-12T19:38:01+09:00">
+    <meta property="article:modified_time" content="2025-01-12T19:38:01+09:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Develop a System for Tomato Quality Assessment 🧑🏻‍💻">
+<meta name="twitter:description" content="Background &amp; Summary">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://kanatonishiura.com/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Develop a System for Tomato Quality Assessment 🧑🏻‍💻",
+      "item": "https://kanatonishiura.com/blogs/pbl2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Develop a System for Tomato Quality Assessment 🧑🏻‍💻",
+  "name": "Develop a System for Tomato Quality Assessment 🧑🏻‍💻",
+  "description": "Background \u0026 Summary",
+  "keywords": [
+    
+  ],
+  "articleBody": "Overview This project is a joint research collaboration between Ritsumeikan University (Japan) and Universitas Dinamika Surabaya (Indonesia).\nWe developed an automated tomato quality assessment system using computer vision and machine learning to improve the efficiency, consistency, and scalability of traditional grading processes.\nCollaboration Structure This research was conducted through an international collaboration with clearly defined roles:\nRitsumeikan University (Japan)\nLed the system design and development Implemented the machine learning models and pipeline Conducted experiments and performance evaluation Universitas Dinamika Surabaya (Indonesia)\nLed data collection and dataset preparation Collected real-world tomato images from local environments Performed manual labeling and data annotation This division of responsibilities enabled us to combine strong technical implementation with real-world data acquisition, improving the practical relevance of the system.\nMotivation \u0026 Background Tomato grading is typically performed manually, which introduces:\nHuman bias and inconsistency High labor costs Limited scalability This project aims to solve these issues by building an automated, image-based grading system.\nSystem Architecture 1. Image Acquisition Individual input (uploaded images) Industrial input (video frames from conveyor systems) 2. Preprocessing Segmentation to isolate the tomato Auto-cropping to remove background noise Normalization for consistent input conditions Feature Extraction Color Features: RGB distribution, ripeness indicators Shape Features: Size, circularity, symmetry Texture Features: Surface smoothness, defect detection Machine Learning Models Freshness Classification (CNN) VGG16-based architecture Transfer learning and fine-tuning Captures high-level visual features related to ripeness Physical Quality Assessment (SVM) Uses handcrafted features Evaluates uniformity, size, and defects Output Freshness Grade: A–D Physical Quality Score: 1–4 Dataset \u0026 Experiments ~10,000+ training images (open-source datasets) ~300 real-world images collected and labeled by Universitas Dinamika Evaluation using: F1 Score 5-fold cross-validation Results Successfully built an end-to-end grading system CNN effectively captured freshness-related features SVM provided interpretable physical quality evaluation Hybrid approach improved overall robustness Industrial Extension Video-to-frame processing for batch grading Designed for real-time use in conveyor-based systems Demonstrated scalability for agricultural and industrial applications Limitations Dataset diversity remains limited Freshness classification partially relies on mapping Limited number of grading classes Future Work Expand dataset with more environmental variations Train models from scratch for improved accuracy Develop a user-friendly interface Optimize for real-time deployment Tech Stack Python, OpenCV, NumPy, Pandas TensorFlow, PyTorch, Scikit-learn Matplotlib, Seaborn Key Contributions Developed a hybrid ML system (CNN + SVM) Designed a full end-to-end pipeline Contributed to an international collaborative research project Bridged technical development and real-world data collection Takeaways Through this project, I gained experience in:\nInternational research collaboration End-to-end AI system development Computer vision for real-world applications Data-driven problem solving Impact This project demonstrates how AI can be applied to agriculture to:\nImprove efficiency and consistency Reduce human bias Enable scalable quality assessment systems It reflects my interest in applying AI and optimization techniques to real-world problems in a global context.\n",
+  "wordCount" : "457",
+  "inLanguage": "en",
+  "datePublished": "2025-01-12T19:38:01+09:00",
+  "dateModified": "2025-01-12T19:38:01+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "Kanato Nishiura"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kanatonishiura.com/blogs/pbl2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kanato Nishiura",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kanatonishiura.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://kanatonishiura.com/" accesskey="h" title="Kanato Nishiura (Alt + H)">Kanato Nishiura</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://kanatonishiura.com/about/aboutme" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/blogs" title="Blogs">
+                    <span>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://kanatonishiura.com/">Home</a>&nbsp;»&nbsp;<a href="https://kanatonishiura.com/blogs/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Develop a System for Tomato Quality Assessment 🧑🏻‍💻
+    </h1>
+    <div class="post-description">
+      Background &amp; Summary
+    </div>
+    <div class="post-meta"><span title='2025-01-12 19:38:01 +0900 JST'>January 12, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Kanato Nishiura</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#collaboration-structure" aria-label="Collaboration Structure">Collaboration Structure</a></li>
+                <li>
+                    <a href="#motivation--background" aria-label="Motivation &amp; Background">Motivation &amp; Background</a></li>
+                <li>
+                    <a href="#system-architecture" aria-label="System Architecture">System Architecture</a><ul>
+                        
+                <li>
+                    <a href="#1-image-acquisition" aria-label="1. Image Acquisition">1. Image Acquisition</a></li>
+                <li>
+                    <a href="#2-preprocessing" aria-label="2. Preprocessing">2. Preprocessing</a></li></ul>
+                </li>
+                <li>
+                    <a href="#feature-extraction" aria-label="Feature Extraction">Feature Extraction</a></li>
+                <li>
+                    <a href="#machine-learning-models" aria-label="Machine Learning Models">Machine Learning Models</a><ul>
+                        
+                <li>
+                    <a href="#freshness-classification-cnn" aria-label="Freshness Classification (CNN)">Freshness Classification (CNN)</a></li>
+                <li>
+                    <a href="#physical-quality-assessment-svm" aria-label="Physical Quality Assessment (SVM)">Physical Quality Assessment (SVM)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#output" aria-label="Output">Output</a></li>
+                <li>
+                    <a href="#dataset--experiments" aria-label="Dataset &amp; Experiments">Dataset &amp; Experiments</a></li>
+                <li>
+                    <a href="#results" aria-label="Results">Results</a></li>
+                <li>
+                    <a href="#industrial-extension" aria-label="Industrial Extension">Industrial Extension</a></li>
+                <li>
+                    <a href="#limitations" aria-label="Limitations">Limitations</a></li>
+                <li>
+                    <a href="#future-work" aria-label="Future Work">Future Work</a></li>
+                <li>
+                    <a href="#tech-stack" aria-label="Tech Stack">Tech Stack</a></li>
+                <li>
+                    <a href="#key-contributions" aria-label="Key Contributions">Key Contributions</a></li>
+                <li>
+                    <a href="#takeaways" aria-label="Takeaways">Takeaways</a></li>
+                <li>
+                    <a href="#impact" aria-label="Impact">Impact</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>This project is a <strong>joint research collaboration between Ritsumeikan University (Japan) and Universitas Dinamika Surabaya (Indonesia)</strong>.<br>
+We developed an <strong>automated tomato quality assessment system</strong> using computer vision and machine learning to improve the efficiency, consistency, and scalability of traditional grading processes.</p>
+<hr>
+<h3 id="collaboration-structure">Collaboration Structure<a hidden class="anchor" aria-hidden="true" href="#collaboration-structure">#</a></h3>
+<p>This research was conducted through an international collaboration with clearly defined roles:</p>
+<ul>
+<li>
+<p><strong>Ritsumeikan University (Japan)</strong></p>
+<ul>
+<li>Led the <strong>system design and development</strong></li>
+<li>Implemented the <strong>machine learning models and pipeline</strong></li>
+<li>Conducted experiments and performance evaluation</li>
+</ul>
+</li>
+<li>
+<p><strong>Universitas Dinamika Surabaya (Indonesia)</strong></p>
+<ul>
+<li>Led <strong>data collection and dataset preparation</strong></li>
+<li>Collected real-world tomato images from local environments</li>
+<li>Performed <strong>manual labeling and data annotation</strong></li>
+</ul>
+</li>
+</ul>
+<p>This division of responsibilities enabled us to combine <strong>strong technical implementation</strong> with <strong>real-world data acquisition</strong>, improving the practical relevance of the system.</p>
+<hr>
+<h3 id="motivation--background">Motivation &amp; Background<a hidden class="anchor" aria-hidden="true" href="#motivation--background">#</a></h3>
+<p>Tomato grading is typically performed manually, which introduces:</p>
+<ul>
+<li>Human bias and inconsistency</li>
+<li>High labor costs</li>
+<li>Limited scalability</li>
+</ul>
+<p>This project aims to solve these issues by building an automated, image-based grading system.</p>
+<hr>
+<h3 id="system-architecture">System Architecture<a hidden class="anchor" aria-hidden="true" href="#system-architecture">#</a></h3>
+<h4 id="1-image-acquisition">1. Image Acquisition<a hidden class="anchor" aria-hidden="true" href="#1-image-acquisition">#</a></h4>
+<ul>
+<li>Individual input (uploaded images)</li>
+<li>Industrial input (video frames from conveyor systems)</li>
+</ul>
+<hr>
+<h4 id="2-preprocessing">2. Preprocessing<a hidden class="anchor" aria-hidden="true" href="#2-preprocessing">#</a></h4>
+<ul>
+<li>Segmentation to isolate the tomato</li>
+<li>Auto-cropping to remove background noise</li>
+<li>Normalization for consistent input conditions</li>
+</ul>
+<hr>
+<h3 id="feature-extraction">Feature Extraction<a hidden class="anchor" aria-hidden="true" href="#feature-extraction">#</a></h3>
+<ul>
+<li><strong>Color Features</strong>: RGB distribution, ripeness indicators</li>
+<li><strong>Shape Features</strong>: Size, circularity, symmetry</li>
+<li><strong>Texture Features</strong>: Surface smoothness, defect detection</li>
+</ul>
+<hr>
+<h3 id="machine-learning-models">Machine Learning Models<a hidden class="anchor" aria-hidden="true" href="#machine-learning-models">#</a></h3>
+<h4 id="freshness-classification-cnn">Freshness Classification (CNN)<a hidden class="anchor" aria-hidden="true" href="#freshness-classification-cnn">#</a></h4>
+<ul>
+<li>VGG16-based architecture</li>
+<li>Transfer learning and fine-tuning</li>
+<li>Captures high-level visual features related to ripeness</li>
+</ul>
+<h4 id="physical-quality-assessment-svm">Physical Quality Assessment (SVM)<a hidden class="anchor" aria-hidden="true" href="#physical-quality-assessment-svm">#</a></h4>
+<ul>
+<li>Uses handcrafted features</li>
+<li>Evaluates uniformity, size, and defects</li>
+</ul>
+<hr>
+<h3 id="output">Output<a hidden class="anchor" aria-hidden="true" href="#output">#</a></h3>
+<ul>
+<li><strong>Freshness Grade</strong>: A–D</li>
+<li><strong>Physical Quality Score</strong>: 1–4</li>
+</ul>
+<hr>
+<h3 id="dataset--experiments">Dataset &amp; Experiments<a hidden class="anchor" aria-hidden="true" href="#dataset--experiments">#</a></h3>
+<ul>
+<li>~10,000+ training images (open-source datasets)</li>
+<li>~300 real-world images collected and labeled by Universitas Dinamika</li>
+<li>Evaluation using:
+<ul>
+<li>F1 Score</li>
+<li>5-fold cross-validation</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="results">Results<a hidden class="anchor" aria-hidden="true" href="#results">#</a></h3>
+<ul>
+<li>Successfully built an end-to-end grading system</li>
+<li>CNN effectively captured freshness-related features</li>
+<li>SVM provided interpretable physical quality evaluation</li>
+<li>Hybrid approach improved overall robustness</li>
+</ul>
+<hr>
+<h3 id="industrial-extension">Industrial Extension<a hidden class="anchor" aria-hidden="true" href="#industrial-extension">#</a></h3>
+<ul>
+<li>Video-to-frame processing for batch grading</li>
+<li>Designed for real-time use in conveyor-based systems</li>
+<li>Demonstrated scalability for agricultural and industrial applications</li>
+</ul>
+<hr>
+<h3 id="limitations">Limitations<a hidden class="anchor" aria-hidden="true" href="#limitations">#</a></h3>
+<ul>
+<li>Dataset diversity remains limited</li>
+<li>Freshness classification partially relies on mapping</li>
+<li>Limited number of grading classes</li>
+</ul>
+<hr>
+<h3 id="future-work">Future Work<a hidden class="anchor" aria-hidden="true" href="#future-work">#</a></h3>
+<ul>
+<li>Expand dataset with more environmental variations</li>
+<li>Train models from scratch for improved accuracy</li>
+<li>Develop a user-friendly interface</li>
+<li>Optimize for real-time deployment</li>
+</ul>
+<hr>
+<h3 id="tech-stack">Tech Stack<a hidden class="anchor" aria-hidden="true" href="#tech-stack">#</a></h3>
+<ul>
+<li>Python, OpenCV, NumPy, Pandas</li>
+<li>TensorFlow, PyTorch, Scikit-learn</li>
+<li>Matplotlib, Seaborn</li>
+</ul>
+<hr>
+<h3 id="key-contributions">Key Contributions<a hidden class="anchor" aria-hidden="true" href="#key-contributions">#</a></h3>
+<ul>
+<li>Developed a <strong>hybrid ML system (CNN + SVM)</strong></li>
+<li>Designed a <strong>full end-to-end pipeline</strong></li>
+<li>Contributed to an <strong>international collaborative research project</strong></li>
+<li>Bridged <strong>technical development and real-world data collection</strong></li>
+</ul>
+<hr>
+<h3 id="takeaways">Takeaways<a hidden class="anchor" aria-hidden="true" href="#takeaways">#</a></h3>
+<p>Through this project, I gained experience in:</p>
+<ul>
+<li>International research collaboration</li>
+<li>End-to-end AI system development</li>
+<li>Computer vision for real-world applications</li>
+<li>Data-driven problem solving</li>
+</ul>
+<hr>
+<h3 id="impact">Impact<a hidden class="anchor" aria-hidden="true" href="#impact">#</a></h3>
+<p>This project demonstrates how AI can be applied to agriculture to:</p>
+<ul>
+<li>Improve efficiency and consistency</li>
+<li>Reduce human bias</li>
+<li>Enable scalable quality assessment systems</li>
+</ul>
+<p>It reflects my interest in applying <strong>AI and optimization techniques to real-world problems in a global context</strong>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://kanatonishiura.com/blogs/pbl3/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻</span>
+  </a>
+  <a class="next" href="https://kanatonishiura.com/blogs/pandas/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Introduction to pandas 🧑🏻</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://kanatonishiura.com/">Kanato Nishiura</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

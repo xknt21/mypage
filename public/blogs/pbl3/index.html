@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻 | Kanato Nishiura</title>
+<meta name="keywords" content="">
+<meta name="description" content="Background &amp; Summary">
+<meta name="author" content="Kanato Nishiura">
+<link rel="canonical" href="https://kanatonishiura.com/blogs/pbl3/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://kanatonishiura.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kanatonishiura.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kanatonishiura.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://kanatonishiura.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://kanatonishiura.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://kanatonishiura.com/blogs/pbl3/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://kanatonishiura.com/blogs/pbl3/">
+  <meta property="og:site_name" content="Kanato Nishiura">
+  <meta property="og:title" content="Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻">
+  <meta property="og:description" content="Background &amp; Summary">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blogs">
+    <meta property="article:published_time" content="2025-07-27T10:00:01+09:00">
+    <meta property="article:modified_time" content="2025-07-27T10:00:01+09:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻">
+<meta name="twitter:description" content="Background &amp; Summary">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://kanatonishiura.com/blogs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻",
+      "item": "https://kanatonishiura.com/blogs/pbl3/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻",
+  "name": "Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻",
+  "description": "Background \u0026 Summary",
+  "keywords": [
+    
+  ],
+  "articleBody": "Project Website: https://xknt21.github.io\nThis project is introduced in detail on the official project website above, including system design, implementation details, and experimental results.\nOverview This project is a mobile and AI-based system for stray cat re-identification, developed as part of a 15-week Project-Based Learning (PBL) course.\nThe system aims to support the Trap-Neuter-Return (TNR) program by preventing redundant medical treatments and improving coordination between volunteers, animal hospitals, and organizations in the Kansai region of Japan.\nThe application integrates:\nA React Native mobile app A Flask-based backend A deep learning-based cat re-identification model Motivation In TNR activities, the same stray cat is often captured and treated multiple times due to the lack of a reliable identification system. This leads to:\nUnnecessary medical procedures Increased burden on animal hospitals Inefficient use of resources This project aims to solve these issues by enabling image-based identification of individual cats.\nSystem Architecture The system consists of three main components:\n1. Frontend (Mobile \u0026 Web) Built with React Native (Expo) Allows users to: Capture or upload cat images View identification results Access cat profiles and medical records 2. Backend (Flask API) Handles: Image processing requests Model inference Database communication Provides RESTful APIs for both mobile and web clients 3. AI Model (Cat Re-Identification) Siamese Neural Network for similarity learning Generates embeddings and performs matching Model Pipeline User uploads or captures a cat image YOLO-based model detects and crops the cat face Image is resized and normalized Siamese network generates a 128-dimensional embedding Embedding is compared with stored embeddings using Euclidean distance If distance \u003c threshold (0.4), a match is returned; otherwise, no match Model Architecture Siamese Network Backbone: EfficientNetB3 (default), VGG16 or MobileNetV2 (optional) Embedding Head: Global Average Pooling Dense (128 units, ReLU) Batch Normalization / Dropout L2 normalization Loss Functions Contrastive Loss (primary) Triplet Loss (experimental) Dataset Total Cats: 250 Total Images: 1,880 Average Images per Cat: 7.5 Sources:\nKaggle Cat Re-ID datasets HelloStreetCat dataset Custom scraped datasets Training Details Optimizer: Adam (lr = 0.0001) Batch Size: 16 Epochs: 50 (production) Image Size: 200×200 Data Augmentation: Flip, rotation, noise Performance Contrastive Model Accuracy: 69.4% Precision: 67.7% Recall: 69.4% F1 Score: 68.2% Key Insights Contrastive learning performs well with limited data Triplet loss requires more data and tuning Model is suitable for practical deployment Key Features Cat Re-Identification Image-based matching with confidence scores Detects previously treated cats Prevents duplicate medical interventions Medical Record Management Stores treatment history, vaccination status Supports updates by animal hospitals Role-Based System Volunteers: upload images and check matches Hospitals: manage medical records Admins: system monitoring and analytics Admin Dashboard Match statistics Activity tracking Dataset insights System Design Principles No Auto-Registration Policy\nPrevents incorrect or duplicate entries Only authorized admins can register new cats Privacy \u0026 Security\nAPI key authentication Secure data handling (TLS, encryption) Scalability\nDesigned for up to 1000 users Supports real-time inference Tech Stack Frontend: React Native, Expo Backend: Python, Flask AI: TensorFlow, Keras Computer Vision: OpenCV, YOLO Data: NumPy, Pandas My Contributions Designed and implemented the AI model pipeline Developed the Flask backend for model inference Contributed to system integration (mobile ↔ backend ↔ AI) Evaluated model performance and improved training process Challenges Limited dataset size for deep metric learning Difficulty in tuning triplet loss Ensuring real-time performance on mobile environments Maintaining data quality without auto-registration Future Work Improve accuracy with larger datasets Optimize model for edge/mobile deployment Enhance UI/UX for non-technical users Expand deployment beyond Kansai region Impact This project demonstrates how AI can support animal welfare by:\nReducing redundant medical treatments Improving efficiency in TNR operations Enabling data-driven coordination between stakeholders It reflects my interest in applying computer vision and machine learning to socially impactful real-world problems.\n",
+  "wordCount" : "610",
+  "inLanguage": "en",
+  "datePublished": "2025-07-27T10:00:01+09:00",
+  "dateModified": "2025-07-27T10:00:01+09:00",
+  "author":{
+    "@type": "Person",
+    "name": "Kanato Nishiura"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kanatonishiura.com/blogs/pbl3/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kanato Nishiura",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kanatonishiura.com/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://kanatonishiura.com/" accesskey="h" title="Kanato Nishiura (Alt + H)">Kanato Nishiura</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://kanatonishiura.com/about/aboutme" title="About Me">
+                    <span>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/blogs" title="Blogs">
+                    <span>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://kanatonishiura.com/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://kanatonishiura.com/">Home</a>&nbsp;»&nbsp;<a href="https://kanatonishiura.com/blogs/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Develop a Re-Identification System for Stray Cats Post-TNR Program 🧑🏻‍💻
+    </h1>
+    <div class="post-description">
+      Background &amp; Summary
+    </div>
+    <div class="post-meta"><span title='2025-07-27 10:00:01 +0900 JST'>July 27, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Kanato Nishiura</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#overview" aria-label="Overview">Overview</a></li>
+                <li>
+                    <a href="#motivation" aria-label="Motivation">Motivation</a></li>
+                <li>
+                    <a href="#system-architecture" aria-label="System Architecture">System Architecture</a><ul>
+                        
+                <li>
+                    <a href="#1-frontend-mobile--web" aria-label="1. Frontend (Mobile &amp; Web)">1. Frontend (Mobile &amp; Web)</a></li>
+                <li>
+                    <a href="#2-backend-flask-api" aria-label="2. Backend (Flask API)">2. Backend (Flask API)</a></li>
+                <li>
+                    <a href="#3-ai-model-cat-re-identification" aria-label="3. AI Model (Cat Re-Identification)">3. AI Model (Cat Re-Identification)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#model-pipeline" aria-label="Model Pipeline">Model Pipeline</a></li>
+                <li>
+                    <a href="#model-architecture" aria-label="Model Architecture">Model Architecture</a><ul>
+                        
+                <li>
+                    <a href="#siamese-network" aria-label="Siamese Network">Siamese Network</a></li>
+                <li>
+                    <a href="#loss-functions" aria-label="Loss Functions">Loss Functions</a></li></ul>
+                </li>
+                <li>
+                    <a href="#dataset" aria-label="Dataset">Dataset</a></li>
+                <li>
+                    <a href="#training-details" aria-label="Training Details">Training Details</a></li>
+                <li>
+                    <a href="#performance" aria-label="Performance">Performance</a><ul>
+                        
+                <li>
+                    <a href="#contrastive-model" aria-label="Contrastive Model">Contrastive Model</a></li>
+                <li>
+                    <a href="#key-insights" aria-label="Key Insights">Key Insights</a></li></ul>
+                </li>
+                <li>
+                    <a href="#key-features" aria-label="Key Features">Key Features</a><ul>
+                        
+                <li>
+                    <a href="#cat-re-identification" aria-label="Cat Re-Identification">Cat Re-Identification</a></li>
+                <li>
+                    <a href="#medical-record-management" aria-label="Medical Record Management">Medical Record Management</a></li>
+                <li>
+                    <a href="#role-based-system" aria-label="Role-Based System">Role-Based System</a></li>
+                <li>
+                    <a href="#admin-dashboard" aria-label="Admin Dashboard">Admin Dashboard</a></li></ul>
+                </li>
+                <li>
+                    <a href="#system-design-principles" aria-label="System Design Principles">System Design Principles</a></li>
+                <li>
+                    <a href="#tech-stack" aria-label="Tech Stack">Tech Stack</a></li>
+                <li>
+                    <a href="#my-contributions" aria-label="My Contributions">My Contributions</a></li>
+                <li>
+                    <a href="#challenges" aria-label="Challenges">Challenges</a></li>
+                <li>
+                    <a href="#future-work" aria-label="Future Work">Future Work</a></li>
+                <li>
+                    <a href="#impact" aria-label="Impact">Impact</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><strong>Project Website</strong>: <a href="https://xknt21.github.io">https://xknt21.github.io</a></p>
+<p>This project is introduced in detail on the official project website above, including system design, implementation details, and experimental results.</p>
+<hr>
+<h3 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h3>
+<p>This project is a <strong>mobile and AI-based system for stray cat re-identification</strong>, developed as part of a <strong>15-week Project-Based Learning (PBL)</strong> course.<br>
+The system aims to support the <strong>Trap-Neuter-Return (TNR) program</strong> by preventing redundant medical treatments and improving coordination between volunteers, animal hospitals, and organizations in the Kansai region of Japan.</p>
+<p>The application integrates:</p>
+<ul>
+<li>A <strong>React Native mobile app</strong></li>
+<li>A <strong>Flask-based backend</strong></li>
+<li>A <strong>deep learning-based cat re-identification model</strong></li>
+</ul>
+<hr>
+<h3 id="motivation">Motivation<a hidden class="anchor" aria-hidden="true" href="#motivation">#</a></h3>
+<p>In TNR activities, the same stray cat is often captured and treated multiple times due to the lack of a reliable identification system. This leads to:</p>
+<ul>
+<li>Unnecessary medical procedures</li>
+<li>Increased burden on animal hospitals</li>
+<li>Inefficient use of resources</li>
+</ul>
+<p>This project aims to solve these issues by enabling <strong>image-based identification of individual cats</strong>.</p>
+<hr>
+<h3 id="system-architecture">System Architecture<a hidden class="anchor" aria-hidden="true" href="#system-architecture">#</a></h3>
+<p>The system consists of three main components:</p>
+<h4 id="1-frontend-mobile--web">1. Frontend (Mobile &amp; Web)<a hidden class="anchor" aria-hidden="true" href="#1-frontend-mobile--web">#</a></h4>
+<ul>
+<li>Built with React Native (Expo)</li>
+<li>Allows users to:
+<ul>
+<li>Capture or upload cat images</li>
+<li>View identification results</li>
+<li>Access cat profiles and medical records</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-backend-flask-api">2. Backend (Flask API)<a hidden class="anchor" aria-hidden="true" href="#2-backend-flask-api">#</a></h4>
+<ul>
+<li>Handles:
+<ul>
+<li>Image processing requests</li>
+<li>Model inference</li>
+<li>Database communication</li>
+</ul>
+</li>
+<li>Provides RESTful APIs for both mobile and web clients</li>
+</ul>
+<h4 id="3-ai-model-cat-re-identification">3. AI Model (Cat Re-Identification)<a hidden class="anchor" aria-hidden="true" href="#3-ai-model-cat-re-identification">#</a></h4>
+<ul>
+<li>Siamese Neural Network for similarity learning</li>
+<li>Generates embeddings and performs matching</li>
+</ul>
+<hr>
+<h3 id="model-pipeline">Model Pipeline<a hidden class="anchor" aria-hidden="true" href="#model-pipeline">#</a></h3>
+<ol>
+<li>User uploads or captures a cat image</li>
+<li>YOLO-based model detects and crops the cat face</li>
+<li>Image is resized and normalized</li>
+<li>Siamese network generates a <strong>128-dimensional embedding</strong></li>
+<li>Embedding is compared with stored embeddings using <strong>Euclidean distance</strong></li>
+<li>If distance &lt; threshold (0.4), a match is returned; otherwise, no match</li>
+</ol>
+<hr>
+<h3 id="model-architecture">Model Architecture<a hidden class="anchor" aria-hidden="true" href="#model-architecture">#</a></h3>
+<h4 id="siamese-network">Siamese Network<a hidden class="anchor" aria-hidden="true" href="#siamese-network">#</a></h4>
+<ul>
+<li><strong>Backbone</strong>: EfficientNetB3 (default), VGG16 or MobileNetV2 (optional)</li>
+<li><strong>Embedding Head</strong>:
+<ul>
+<li>Global Average Pooling</li>
+<li>Dense (128 units, ReLU)</li>
+<li>Batch Normalization / Dropout</li>
+<li>L2 normalization</li>
+</ul>
+</li>
+</ul>
+<h4 id="loss-functions">Loss Functions<a hidden class="anchor" aria-hidden="true" href="#loss-functions">#</a></h4>
+<ul>
+<li><strong>Contrastive Loss</strong> (primary)</li>
+<li><strong>Triplet Loss</strong> (experimental)</li>
+</ul>
+<hr>
+<h3 id="dataset">Dataset<a hidden class="anchor" aria-hidden="true" href="#dataset">#</a></h3>
+<ul>
+<li><strong>Total Cats</strong>: 250</li>
+<li><strong>Total Images</strong>: 1,880</li>
+<li><strong>Average Images per Cat</strong>: 7.5</li>
+</ul>
+<p>Sources:</p>
+<ul>
+<li>Kaggle Cat Re-ID datasets</li>
+<li>HelloStreetCat dataset</li>
+<li>Custom scraped datasets</li>
+</ul>
+<hr>
+<h3 id="training-details">Training Details<a hidden class="anchor" aria-hidden="true" href="#training-details">#</a></h3>
+<ul>
+<li>Optimizer: Adam (lr = 0.0001)</li>
+<li>Batch Size: 16</li>
+<li>Epochs: 50 (production)</li>
+<li>Image Size: 200×200</li>
+<li>Data Augmentation:
+<ul>
+<li>Flip, rotation, noise</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="performance">Performance<a hidden class="anchor" aria-hidden="true" href="#performance">#</a></h3>
+<h4 id="contrastive-model">Contrastive Model<a hidden class="anchor" aria-hidden="true" href="#contrastive-model">#</a></h4>
+<ul>
+<li>Accuracy: 69.4%</li>
+<li>Precision: 67.7%</li>
+<li>Recall: 69.4%</li>
+<li>F1 Score: 68.2%</li>
+</ul>
+<h4 id="key-insights">Key Insights<a hidden class="anchor" aria-hidden="true" href="#key-insights">#</a></h4>
+<ul>
+<li>Contrastive learning performs well with limited data</li>
+<li>Triplet loss requires more data and tuning</li>
+<li>Model is suitable for practical deployment</li>
+</ul>
+<hr>
+<h3 id="key-features">Key Features<a hidden class="anchor" aria-hidden="true" href="#key-features">#</a></h3>
+<h4 id="cat-re-identification">Cat Re-Identification<a hidden class="anchor" aria-hidden="true" href="#cat-re-identification">#</a></h4>
+<ul>
+<li>Image-based matching with confidence scores</li>
+<li>Detects previously treated cats</li>
+<li>Prevents duplicate medical interventions</li>
+</ul>
+<h4 id="medical-record-management">Medical Record Management<a hidden class="anchor" aria-hidden="true" href="#medical-record-management">#</a></h4>
+<ul>
+<li>Stores treatment history, vaccination status</li>
+<li>Supports updates by animal hospitals</li>
+</ul>
+<h4 id="role-based-system">Role-Based System<a hidden class="anchor" aria-hidden="true" href="#role-based-system">#</a></h4>
+<ul>
+<li>Volunteers: upload images and check matches</li>
+<li>Hospitals: manage medical records</li>
+<li>Admins: system monitoring and analytics</li>
+</ul>
+<h4 id="admin-dashboard">Admin Dashboard<a hidden class="anchor" aria-hidden="true" href="#admin-dashboard">#</a></h4>
+<ul>
+<li>Match statistics</li>
+<li>Activity tracking</li>
+<li>Dataset insights</li>
+</ul>
+<hr>
+<h3 id="system-design-principles">System Design Principles<a hidden class="anchor" aria-hidden="true" href="#system-design-principles">#</a></h3>
+<ul>
+<li>
+<p><strong>No Auto-Registration Policy</strong></p>
+<ul>
+<li>Prevents incorrect or duplicate entries</li>
+<li>Only authorized admins can register new cats</li>
+</ul>
+</li>
+<li>
+<p><strong>Privacy &amp; Security</strong></p>
+<ul>
+<li>API key authentication</li>
+<li>Secure data handling (TLS, encryption)</li>
+</ul>
+</li>
+<li>
+<p><strong>Scalability</strong></p>
+<ul>
+<li>Designed for up to 1000 users</li>
+<li>Supports real-time inference</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="tech-stack">Tech Stack<a hidden class="anchor" aria-hidden="true" href="#tech-stack">#</a></h3>
+<ul>
+<li><strong>Frontend</strong>: React Native, Expo</li>
+<li><strong>Backend</strong>: Python, Flask</li>
+<li><strong>AI</strong>: TensorFlow, Keras</li>
+<li><strong>Computer Vision</strong>: OpenCV, YOLO</li>
+<li><strong>Data</strong>: NumPy, Pandas</li>
+</ul>
+<hr>
+<h3 id="my-contributions">My Contributions<a hidden class="anchor" aria-hidden="true" href="#my-contributions">#</a></h3>
+<ul>
+<li>Designed and implemented the <strong>AI model pipeline</strong></li>
+<li>Developed the <strong>Flask backend for model inference</strong></li>
+<li>Contributed to <strong>system integration (mobile ↔ backend ↔ AI)</strong></li>
+<li>Evaluated model performance and improved training process</li>
+</ul>
+<hr>
+<h3 id="challenges">Challenges<a hidden class="anchor" aria-hidden="true" href="#challenges">#</a></h3>
+<ul>
+<li>Limited dataset size for deep metric learning</li>
+<li>Difficulty in tuning triplet loss</li>
+<li>Ensuring real-time performance on mobile environments</li>
+<li>Maintaining data quality without auto-registration</li>
+</ul>
+<hr>
+<h3 id="future-work">Future Work<a hidden class="anchor" aria-hidden="true" href="#future-work">#</a></h3>
+<ul>
+<li>Improve accuracy with larger datasets</li>
+<li>Optimize model for edge/mobile deployment</li>
+<li>Enhance UI/UX for non-technical users</li>
+<li>Expand deployment beyond Kansai region</li>
+</ul>
+<hr>
+<h3 id="impact">Impact<a hidden class="anchor" aria-hidden="true" href="#impact">#</a></h3>
+<p>This project demonstrates how AI can support animal welfare by:</p>
+<ul>
+<li>Reducing redundant medical treatments</li>
+<li>Improving efficiency in TNR operations</li>
+<li>Enabling data-driven coordination between stakeholders</li>
+</ul>
+<p>It reflects my interest in applying <strong>computer vision and machine learning to socially impactful real-world problems</strong>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://kanatonishiura.com/blogs/internship/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>My Internship Experience as an AI Engineer 🧑🏻‍💻</span>
+  </a>
+  <a class="next" href="https://kanatonishiura.com/blogs/pbl2/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Develop a System for Tomato Quality Assessment 🧑🏻‍💻</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://kanatonishiura.com/">Kanato Nishiura</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
