@@ -18,6 +18,7 @@ ShowPostNavLinks: true
 This project is a **joint research collaboration between Ritsumeikan University (Japan) and Universitas Dinamika Surabaya (Indonesia)**.  
 We developed an **automated tomato quality assessment system** using computer vision and machine learning to improve the efficiency, consistency, and scalability of traditional grading processes.
 
+![Imgur](https://imgur.com/aaeyZvp.jpg)
 ---
 
 ### Collaboration Structure
