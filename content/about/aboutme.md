@@ -13,7 +13,7 @@ ShowReadingTime: true
 ShowPostNavLinks: false
 ---
 
-# Self-introduction
+# Self-Introduction
 * Name 
   * Kanato Nishiura
 
