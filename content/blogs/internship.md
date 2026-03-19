@@ -13,8 +13,6 @@ hideSummary: false
 ShowReadingTime: true
 ShowPostNavLinks: true
 ---
-# My Internship Experience in AI and Optimization
-
 ## Introduction
 
 During my undergraduate studies, I had the opportunity to work as an AI engineer in two different environments: an educational company and an AI startup. Through these experiences, I worked on real-world problems involving machine learning and optimization, and gained both technical and practical insights.
